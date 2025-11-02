@@ -1,4 +1,4 @@
-/* Сброс стандартных отступов */
+
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +47,7 @@
   font-style: normal;
   line-height: 135%;
   font-size: 18px;
+  max-width: 240px; 
 }
 
 .contacts a {
@@ -91,7 +92,7 @@
   text-align: center;
   line-height: 100%;
   margin: 20px 0;
-  padding-right: 60px;
+  padding-right: 30px; 
 }
 
 .aligned-text_right {
@@ -148,11 +149,12 @@
   gap: 25px;
   list-style: none;
   margin-bottom: 30px;
+  flex-wrap: wrap; 
 }
 
 .card-list-item {
   flex: 1;
-  min-width: 0;
+  min-width: 300px;
 }
 
 .card-link {
