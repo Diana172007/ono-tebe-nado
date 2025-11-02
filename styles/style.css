@@ -47,7 +47,7 @@
   font-style: normal;
   line-height: 135%;
   font-size: 18px;
-  max-width: 240px; 
+  max-width: 240px;
 }
 
 .contacts a {
@@ -92,7 +92,7 @@
   text-align: center;
   line-height: 100%;
   margin: 20px 0;
-  padding-right: 30px; 
+  padding-right: 30px;
 }
 
 .aligned-text_right {
@@ -121,6 +121,7 @@
   text-transform: uppercase;
   line-height: 127%;
   word-spacing: 18px;
+  white-space: nowrap;
 }
 
 .bet-button {
@@ -149,12 +150,14 @@
   gap: 25px;
   list-style: none;
   margin-bottom: 30px;
-  flex-wrap: wrap; 
+  flex-wrap: nowrap; 
 }
 
 .card-list-item {
   flex: 1;
-  min-width: 300px;
+  min-width: 0;
+  width: 430px; 
+  min-height: 450px; 
 }
 
 .card-link {
@@ -167,7 +170,8 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  min-height: 450px;
+  height: 100%; 
+  min-height: 450px; 
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
@@ -214,6 +218,7 @@
   display: grid;
   grid-template-columns: 430px 1fr;
   gap: 25px;
+  justify-items: center;
 }
 
 .about-logo {
@@ -224,7 +229,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-self: center;
 }
 
 .about-logo-image {
