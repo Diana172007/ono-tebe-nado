@@ -1,17 +1,24 @@
+/* Сброс стандартных отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .page-header {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr min-content 1fr;
   padding: 92px 50px;
   align-items: center;
 }
 
 .main-nav {
-  padding-top: 0; 
+  justify-self: start;
 }
 
 .nav-list {
   display: flex;
-  gap: 32px; 
+  gap: 32px;
   list-style: circle;
 }
 
@@ -21,8 +28,8 @@
 
 .nav-link {
   text-decoration: underline;
-  text-underline-offset: 4px; 
-  font-size: 18px; 
+  text-underline-offset: 4px;
+  font-size: 18px;
 }
 
 .nav-link-current {
@@ -30,22 +37,21 @@
 }
 
 .logo {
-  display: block;
-  width: 148px; 
+  width: 148px;
   height: 105px;
-  margin: 0 auto; 
+  justify-self: center;
 }
 
 .contacts {
   justify-self: end;
   font-style: normal;
-  line-height: 1.35;
-  font-size: 18px; 
+  line-height: 135%;
+  font-size: 18px;
+}
 
 .contacts a {
   text-underline-offset: 4px;
 }
-
 
 .hero {
   background-image: url("../images/cover.jpg");
@@ -55,11 +61,11 @@
   padding: 165px 50px 50px;
   display: flex;
   flex-direction: column;
-  gap: 135px;
+  gap: 127px;
+}
 
 .dark-overlay {
   position: absolute;
-  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -69,108 +75,101 @@
 
 .hero-title {
   position: relative;
-  z-index: 2;
-  color: white;
+  color: #fff;
   font-size: 100px;
   font-weight: 700;
   letter-spacing: 30px;
   text-transform: uppercase;
-  line-height: 1.15; 
+  line-height: 115%;
 }
 
-.title-line {
+.aligned-text {
   display: block;
 }
 
-.title-line-center {
+.aligned-text_center {
   text-align: center;
-  margin: 20px 0; 
-  padding-right: 60px; 
+  line-height: 100%;
+  margin: 20px 0;
+  padding-right: 60px;
 }
 
-.title-line-right {
+.aligned-text_right {
   text-align: right;
+  line-height: 100%;
 }
 
-.big-space {
+.letter-spacing-extended {
   letter-spacing: 60px;
 }
 
-.no-space {
-  letter-spacing: normal;
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
-.hero-info {
-  z-index: 2;
+.cover-description {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  gap: 78px; 
+  align-items: center;
+  gap: 78px;
 }
 
-.hero-text {
-  font-weight: 400;
+.cover-description-text {
   font-size: 22px;
-  color: white;
-  line-height: 1.27;
+  color: #fff;
   text-transform: uppercase;
-  word-spacing: 18px; 
-  white-space: nowrap;
+  line-height: 127%;
+  word-spacing: 18px;
 }
 
-.action-btn {
+.bet-button {
   font-size: 22px;
-  font-family: inherit;
-  cursor: pointer;
-  color: white;
+  color: #fff;
   padding: 12px 32px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   text-transform: uppercase;
   background: transparent;
+  cursor: pointer;
 }
 
-
-.lots-section {
-  padding: 180px 50px; 
+.lots {
+  padding: 180px 50px;
 }
 
-.section-heading {
-  text-transform: uppercase;
+.lots-heading {
   font-size: 40px;
   font-weight: 700;
-  margin: 0 0 27px 40px; 
+  text-transform: uppercase;
+  margin: 0 0 27px 40px;
 }
 
-.cards-container {
+.card-list {
   display: flex;
-  flex-wrap: wrap;
   gap: 25px;
   list-style: none;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
-.card-item {
-  width: 430px;
-  min-height: 450px;
-  flex-grow: 1;
+.card-list-item {
+  flex: 1;
+  min-width: 0;
 }
 
 .card-link {
   display: block;
-  text-decoration: none;
   height: 100%;
+  text-decoration: none;
 }
 
-.auction-card {
+.card {
   position: relative;
   background-size: cover;
   background-position: center;
+  min-height: 450px;
+  padding: 50px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 40px;
-  height: 100%;
-  box-sizing: border-box;
 }
 
 .card-film {
@@ -181,118 +180,118 @@
   background-image: url("../images/card-lot-02.jpg");
 }
 
-.card-art {
+.card-picture {
   background-image: url("../images/card-lot-03.jpg");
 }
 
-.card-heading {
-  text-transform: uppercase;
-  text-decoration: underline;
-  z-index: 2;
-  color: white;
+.card-title {
+  color: #fff;
   font-size: 22px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 120%;
+  text-decoration: underline;
+  text-transform: uppercase;
+  z-index: 1;
 }
 
-.card-description {
-  z-index: 2;
-  line-height: 1.2;
-  color: white;
-  font-weight: 400;
+.card-text {
+  color: #fff;
   font-size: 20px;
+  line-height: 120%;
+  z-index: 1;
 }
 
-.more-link {
+.look-more-link {
   font-size: 20px;
+  margin-left: 40px;
   text-underline-offset: 4px;
-  margin-left: 40px; 
 }
 
-.about-section {
-  display: grid;
-  grid-template-columns: 430px 1fr; 
+.about {
   padding: 0 50px 180px;
+  display: grid;
+  grid-template-columns: 430px 1fr;
   gap: 25px;
-  align-items: start; 
 }
 
-.circle-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about-logo {
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background-color: black;
-  justify-self: center; 
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
 }
 
-.logo-white {
-  width: 148px; 
+.about-logo-image {
+  width: 148px;
 }
 
-.about-heading {
-  margin: 100px 0; 
-  font-weight: 700;
+.about-title {
   font-size: 40px;
+  font-weight: 700;
   text-transform: uppercase;
+  margin: 100px 0;
 }
 
-.about-content {
+.about-text {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  font-size: 20px;
-  line-height: 1.2;
 }
 
-
-.page-footer {
+.footer {
   padding: 0 50px 90px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: start; 
+  align-items: start;
 }
 
-.footer-contacts {
+.footer-address {
   font-size: 18px;
   font-style: normal;
-  line-height: 1.35;
+  line-height: 135%;
 }
 
-.footer-contacts a {
+.footer-address a {
   text-underline-offset: 4px;
 }
 
-.footer-links {
+.footer-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
-  gap: 5px; 
 }
 
-.footer-link {
+.footer-menu-link {
   text-underline-offset: 4px;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
-.footer-link-current {
+.footer-menu-link_active {
   text-decoration: none;
 }
 
-.social-nav {
+.footer-social {
   justify-self: end;
 }
 
-.social-links {
-  display: flex;
-  gap: 48px; 
+.footer-social-list {
   list-style: none;
+  display: flex;
+  gap: 48px;
 }
 
-.social-img {
+.footer-social-icon {
+  width: 48px;
   height: 48px;
-  width: auto; 
 }
