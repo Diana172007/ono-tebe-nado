@@ -46,11 +46,10 @@
   text-decoration: none;
   color: #000;
 }
-
 .photo-оно-тебе-надо {
   position: relative;
-  width: 100%;
-  height: 757px;
+  width: 1100px;
+  height: 757px; 
 }
 
 .лого-оно-тебе-надо {
@@ -58,7 +57,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: brightness(0.7);
+  filter: brightness(0.7); 
 }
 
 .banner {
@@ -74,9 +73,7 @@
   text-align: center;
 }
 
-.ОНО,
-.ТЕБЕ,
-.НАДО {
+.ОНО, .ТЕБЕ, .НАДО {
   font-size: 100px;
   font-weight: bold;
   color: #fff;
@@ -84,7 +81,7 @@
   line-height: 1;
   letter-spacing: 30px;
   text-transform: uppercase;
-  text-indent: 30px;
+  text-indent: 30px; 
 }
 
 .ОНО {
@@ -108,9 +105,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 40px; 
   margin-top: 80px;
-  white-space: nowrap;
+  white-space: nowrap; 
 }
 
 .banner h3 {
@@ -120,7 +117,7 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: normal;
-  white-space: nowrap;
+  white-space: nowrap; 
 }
 
 .banner button {
@@ -131,12 +128,11 @@
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
-  margin: 0;
+  margin: 0; 
   font-family: inherit;
   white-space: nowrap;
-  flex-shrink: 0;
+  flex-shrink: 0; 
 }
-
 .lots {
   padding: 50px;
   background: #fff;
@@ -152,8 +148,8 @@
 }
 
 .lots-menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 25px;
   list-style: none;
   padding: 0;
@@ -164,9 +160,9 @@
 .banner-lots-2,
 .banner-lots-3 {
   position: relative;
-  min-height: 500px;
-  background: #000;
-  overflow: hidden;
+  width: 350px;
+  height: 550px;
+  flex-shrink: 0;
 }
 
 .film-lots,
@@ -175,7 +171,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  display: block;
 }
 
 .banner-lots-1::after,
@@ -220,8 +216,8 @@
   line-height: 1.3;
   margin: 0;
   z-index: 2;
-  font-size: 20px;
-  font-family: "Raleway";
+  font-size:20px;
+  font-family:"Raleway";
 }
 
 .watch-more {
@@ -234,10 +230,35 @@
   padding-bottom: 2px;
   border-bottom: 1px solid #000;
 }
+.lots-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0 50px 50px 50px;
+}
 
+.banner-lots-1,
+.banner-lots-2,
+.banner-lots-3 {
+  position: relative;
+  min-height: 500px;
+  background: #000;
+  overflow: hidden;
+}
+
+.film-lots,
+.film2-lots,
+.film3-lots {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
 .about-auction {
-  background: #fff;
-  color: #000;
+  background: #fff; 
+  color: #000; 
   padding: 180px 50px 100px 50px;
 }
 
@@ -252,7 +273,7 @@
 .logo-white-container {
   width: 240px;
   height: 240px;
-  background: #000;
+  background: #000; 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -284,7 +305,7 @@
   line-height: 1.4;
   margin: 0 0 30px 0;
   max-width: 885px;
-  color: #000;
+  color: #000; 
 }
 
 .about-text2 {
@@ -292,9 +313,8 @@
   line-height: 1.4;
   margin: 0;
   max-width: 885px;
-  color: #000;
+  color: #000; 
 }
-
 .class-footer {
   background: #fff;
   color: #000;
@@ -325,7 +345,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  text-decoration: underline;
+  text-decoration: underline
 }
 
 .list-menu-footer li {
