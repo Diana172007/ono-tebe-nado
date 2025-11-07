@@ -24,14 +24,11 @@ body {
   display: flex;
   align-items: center;
 }
+
 .list-menu li:not(:last-child)::after {
   content: "○";
   color: #000;
-  width: 6px;
-  height: 6px;
-  top: 142px;
-  left: 312px;
-  border: 0.5px;
+  margin-left: 32px;
 }
 
 .list-menu a {
@@ -40,6 +37,7 @@ body {
   white-space: nowrap;
   border-bottom: 1px solid currentColor;
 }
+
 .logo-image {
   width: 148px;
   height: 105px;
@@ -271,8 +269,6 @@ body {
 .logo-white {
   width: 148px;
   height: 114px;
-  top: 35px;
-  left: 47px;
 }
 
 .text-logo-white {
