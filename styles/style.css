@@ -10,7 +10,6 @@ body {
   grid-template-columns: 1fr 148px 1fr;
   padding: 92px 50px 91px;
   color: #000;
-  font-size: 18px;
 }
 
 .list-menu {
