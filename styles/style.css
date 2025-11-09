@@ -1,23 +1,25 @@
 body {
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   min-width: 1100px;
   margin: 0 auto;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 133px 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 148px 1fr;
+  padding: 92px 50px 91px 50px;
+  color: #000;
+  font-size: 18px;
 }
 
 .list-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
   list-style: none;
   padding: 0;
-  font-size: 18px;
+  margin: 0;
+  gap: 32px;
 }
 
 .list-menu li {
@@ -26,8 +28,12 @@ body {
 }
 
 .list-menu li:not(:last-child)::after {
-  content: "○";
-  color: #000;
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  background-color: #000;
+  border-radius: 50%;
   margin-left: 32px;
 }
 
@@ -41,14 +47,20 @@ body {
 .logo-image {
   width: 148px;
   height: 105px;
+  justify-self: center;
 }
-.address-header {
+
+.address {
   font-size: 18px;
   font-style: normal;
-  line-height: 1.35; 
+  line-height: 24.3px;
+  text-align: right;
+  max-width: 240px;
+  justify-self: end;
 }
-.address-header a,
-.address-header p {
+
+.address a,
+.address p {
   display: block;
   margin: 0;
   text-decoration: none;
@@ -60,6 +72,10 @@ body {
   width: 1100px;
   height: 757px;
   margin: 0 auto;
+  background: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .лого-оно-тебе-надо {
@@ -77,9 +93,17 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
+  padding: 165px 50px 50px;
+  box-sizing: border-box;
+}
+
+.cover__title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .ОНО,
@@ -95,19 +119,16 @@ body {
 
 .ОНО {
   align-self: flex-start;
-  margin-left: 50px;
   letter-spacing: 60px;
 }
 
 .ТЕБЕ {
   align-self: center;
   letter-spacing: 30px;
-  margin: 20px 0;
 }
 
 .НАДО {
   align-self: flex-end;
-  margin-right: 50px;
   letter-spacing: 60px;
 }
 
@@ -116,17 +137,17 @@ body {
   align-items: center;
   justify-content: end;
   gap: 78px;
-  margin-top: 135px;
-  padding-right: 50px;
+  margin-top: 0;
 }
 
 .text-button-wrapper h3 {
   font-size: 22px;
   font-weight: normal;
-  line-height: 1.27;
+  line-height: 28px;
   text-transform: uppercase;
   word-spacing: 18px;
   margin: 0;
+  color: #fff;
 }
 
 .text-button-wrapper button {
@@ -164,11 +185,18 @@ body {
   margin: 0 0 30px 0;
 }
 
+.lots-menu li {
+  position: relative;
+  width: 334px;
+  height: 563px;
+  flex-grow: 1;
+}
+
 .film-lots,
 .film2-lots,
 .film3-lots {
-  width: 334px;
-  height: 596px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
   position: absolute;
@@ -176,18 +204,12 @@ body {
   left: 0;
 }
 
-.lots-menu li {
-  position: relative;
-  width: 334px;
-  height: 596px;
-}
-
 .banner-lots-1,
 .banner-lots-2,
 .banner-lots-3 {
   position: relative;
-  width: 334px;
-  height: 596px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -214,7 +236,7 @@ body {
 .title-3-lots {
   font-size: 22px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 26.4px;
   text-decoration: underline;
   text-transform: uppercase;
   margin: 0;
@@ -226,7 +248,7 @@ body {
 .text2-lots,
 .text3-lots {
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 24px;
   margin: 0;
   z-index: 2;
   position: relative;
@@ -270,21 +292,21 @@ body {
 }
 
 .text-logo-white {
-  padding-top: 100px;
+  padding-top: 0;
 }
 
 .about-title {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 100px 0;
+  margin: 100px 0 25px 0;
   color: #000;
 }
 
 .about-text,
 .about-text2 {
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 24px;
   margin: 0 0 25px 0;
   color: #000;
 }
@@ -298,17 +320,18 @@ body {
   padding: 0 50px 90px;
   max-width: 1100px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-content: center;
 }
 
 .address-footer {
   font-style: normal;
-  line-height: 1.35;
+  line-height: 24.3px;
   font-size: 18px;
   margin: 0;
   padding: 0;
+  justify-self: start;
 }
 
 .address-footer a,
@@ -325,6 +348,7 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
+  justify-self: center;
 }
 
 .list-menu-footer {
@@ -332,19 +356,17 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-menu-footer li {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0;
-  line-height: 1;
+  line-height: normal;
 }
 
-.main-list-menu-footer {
-  margin-bottom: 11px;
-}
-
-.main-list-menu-footer:last-child {
+.list-menu-footer li:last-child {
   margin-bottom: 0;
 }
 
@@ -356,10 +378,11 @@ body {
 
 .logotip-youtube {
   display: flex;
-  gap: 49px;
+  gap: 48px;
   list-style: none;
   padding: 0;
   margin: 0;
+  justify-self: end;
 }
 
 .img-youtube,
